@@ -16,6 +16,7 @@ function play() {
     bankroll = 100;
     newGame = false;
     $("#bankroll").text(bankroll);
+    $("#bankroll").css("width", bankroll + "%");
     $("#status").removeClass("red").addClass("green");
     $("#status").text("Ready!");
     $("#bet").val("");
@@ -40,6 +41,7 @@ function play() {
 
   bankroll += outcome; 
   $("#bankroll").text(bankroll);
+  $("#bankroll").css("width", bankroll + "%");
   if (bankroll <= 0) {
     $("#status").toggleClass("green", false);
     $("#status").toggleClass("red", true);
